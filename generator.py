@@ -37,6 +37,6 @@ def answer(question,context):
     }
     response = nlp(QA_input)
     if response['score'] < 0.000000001:
-        return 'No suitble answer found in context :(. Consider checking manually if you are sure answer is provided.'
+        return ' Unfortunately, I need more information to provide a suitable answer. Please provide me with the context and the specific question you have.  :( '
     else:
         return response['answer']
