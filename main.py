@@ -6,9 +6,9 @@ def main():
   st.title('Q & A app')
   ans = st.button("Generate Answer")
   col1,col2 = st.columns([1,1])
-  with col1:
-    user_input = st.text_area('Enter question here')
   with col2:
+    user_input = st.text_area('Enter question here')
+  with col1:
     user_context = st.text_area('Enter context here')
   uploaded_file = st.file_uploader("Choose a file", type=["txt", "docx", "pdf"])
   if uploaded_file is not None:
