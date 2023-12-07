@@ -25,7 +25,7 @@ def main():
             if user_input:
                 an = answer(user_input,text) 
                 st.write(an)
-        elif: user_context:
+        elif user_context:
           if user_input:
                 an = answer(user_input,text) 
                 st.write(an)
