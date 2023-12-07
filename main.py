@@ -28,7 +28,7 @@ def main():
                 st.write(an)
         elif user_context:
           if user_input:
-                an = answer(user_input,text)
+                an = answer(user_input,user_context)
                 st.subheader('Answer')
                 st.write(an)
 
