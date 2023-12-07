@@ -1,9 +1,9 @@
 import streamlit as st
-from textly import answer,extract_text_from_txt,extract_text_from_docx,extract_text_from_pdf
+from generator import answer,extract_text_from_txt,extract_text_from_docx,extract_text_from_pdf
 
 
 def main():  
-  st.title('Text Summarizer App')
+  st.title('Q & A app')
   ans = st.button("Generate Answer")
         
   user_input = st.text_area('Enter text here')
