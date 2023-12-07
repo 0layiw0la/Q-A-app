@@ -23,11 +23,13 @@ def main():
   if ans:
         if uploaded_file is not None:
             if user_input:
-                an = answer(user_input,text) 
+                an = answer(user_input,text)
+                st.subheader('Answer')
                 st.write(an)
         elif user_context:
           if user_input:
-                an = answer(user_input,text) 
+                an = answer(user_input,text)
+                st.subheader('Answer')
                 st.write(an)
 
 
