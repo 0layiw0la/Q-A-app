@@ -30,7 +30,7 @@ def extract_text_from_pdf(file):
     return full_text
 
 def answer(question,context):
-    nlp = load_model_2()
+    nlp = load_model()
     QA_input = {
         'question':question,
         'context':context
