@@ -6,8 +6,7 @@ from PyPDF2 import PdfReader
 # Context based q&a
 @st.cache_resource
 def load_model():
-    model_name = "deepset/tinyroberta-squad2"
-    nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
+    nlp = pipeline("question-answering", model="deepset/deberta-v3-large-squad2")
     return nlp
 
 def extract_text_from_txt(file):
@@ -36,7 +35,7 @@ def answer(question,context):
         'context':context
     }
     response = nlp(QA_input)
-    if response['score'] < 0.000000001:
+    if response['score'] < 0.0000001:
         return ' Unfortunately, I need more information to provide a suitable answer. Please provide me with the context and the specific question you have.  :( '
     else:
         return response['answer']
